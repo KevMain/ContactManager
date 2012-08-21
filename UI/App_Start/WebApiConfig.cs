@@ -10,7 +10,7 @@ namespace ContactManager
         public static void Register(HttpConfiguration config)
         {
             //Map routes
-
+            //more comments
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
