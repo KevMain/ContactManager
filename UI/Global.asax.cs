@@ -14,6 +14,8 @@ namespace ContactManager
     {
         protected void Application_Start()
         {
+            //TODO: Move this to task based pattern
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
