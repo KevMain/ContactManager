@@ -2,7 +2,7 @@
 {
     public class Logger
     {
-        private static readonly ILogger _instance = new InMemoryLogger();
+        private static readonly ILogger _instance = new Log4Net();
 
         public static ILogger Instance
         {
