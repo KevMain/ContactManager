@@ -4,7 +4,6 @@ namespace CompatibleSoftware.Infrastructure.Startup
 {
     public class FilterConfig : IBootstrapperTask
     {
-
         private readonly GlobalFilterCollection _filters;
 
         public FilterConfig()

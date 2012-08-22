@@ -20,12 +20,7 @@ namespace CompatibleSoftware.Infrastructure.Startup
         public void Execute()
         {
             _routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            _routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+            _routes.MapRoute("Default", "{controller}/{action}/{id}", new {controller = "Home", action = "Index", id = UrlParameter.Optional});
         }
     }
 }
