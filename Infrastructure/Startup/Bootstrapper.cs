@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Practices.ServiceLocation;
 
 namespace CompatibleSoftware.Infrastructure.Startup
@@ -8,6 +9,7 @@ namespace CompatibleSoftware.Infrastructure.Startup
     /// </summary>
     public static class Bootstrapper
     {
+        
         /// <summary>
         /// Empty static constructor so the class can't be initialised
         /// </summary>
@@ -20,7 +22,8 @@ namespace CompatibleSoftware.Infrastructure.Startup
         /// </summary>
         public static void Run()
         {
-           ServiceLocator.Current.GetAllInstances<IBootstrapperTask>().ToList().ForEach(task => task.Execute());
+            IBootstrapperTasksFactory tasks = new BootstrapperTasksFactory();
+            tasks.CreateTasks().ToList().ForEach(x => x.Execute());
         }
     }
 }
