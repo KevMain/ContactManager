@@ -11,19 +11,19 @@ namespace CompatibleSoftware.Infrastructure.Logging
 
         public bool IsEnabled(LogLevel level)
         {
-            //switch (level)
-            //{
-            //    case LogLevel.Debug:
-            //        return log.IsDebugEnabled;
-            //    case LogLevel.Fatal:
-            //        return log.IsFatalEnabled;
-            //    case LogLevel.Error:
-           //         return log.IsErrorEnabled;
-            //    case LogLevel.Information:
-           //         return log.IsInfoEnabled;
-           //     case LogLevel.Warning:
-           //         return log.IsWarnEnabled;
-           // }
+            switch (level)
+            {
+                case LogLevel.Debug:
+                    return log.IsDebugEnabled;
+                case LogLevel.Fatal:
+                    return log.IsFatalEnabled;
+                case LogLevel.Error:
+                    return log.IsErrorEnabled;
+                case LogLevel.Information:
+                    return log.IsInfoEnabled;
+                case LogLevel.Warning:
+                    return log.IsWarnEnabled;
+            }
 
             return true;
         }
