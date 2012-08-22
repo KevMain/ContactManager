@@ -4,7 +4,6 @@ namespace CompatibleSoftware.Infrastructure.Startup
 {
     public class WebApiConfig : IBootstrapperTask
     {
-
         private readonly HttpConfiguration _httpConfiguration;
 
         public WebApiConfig()

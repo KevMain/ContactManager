@@ -6,7 +6,7 @@ namespace CompatibleSoftware.ContactManager.UI
     {
         protected void Application_Start()
         {
-            Infrastructure.Bootstrapper.Run();
+            Infrastructure.Startup.Bootstrapper.Run();
         }
     }
 }
