@@ -54,9 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomCoreException.cs" />
+    <Compile Include="CustomException.cs" />
+    <Compile Include="CustomFatalException.cs" />
+    <Compile Include="Exceptions\DefaultExceptionPolicy.cs" />
+    <Compile Include="Exceptions\IExceptionPolicy.cs" />
     <Compile Include="Logging\Log4Net.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Logging\LoggingExtensions.cs" />
+    <Compile Include="Security\CustomSecurityException.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Logging\ILogger.cs" />
@@ -69,10 +75,14 @@
     <Compile Include="Startup\RegisterAreas.cs" />
     <Compile Include="Startup\RouteConfig.cs" />
     <Compile Include="Startup\WebApiConfig.cs" />
+    <Compile Include="UI\Notify\INotifier.cs" />
+    <Compile Include="UI\Notify\NotifierExtensions.cs" />
+    <Compile Include="UI\Notify\NotifyFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
