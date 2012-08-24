@@ -129,9 +129,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Plumbing\Installers\ControllersInstaller.cs" />
-    <Compile Include="Plumbing\Installers\LoggerInstaller.cs" />
-    <Compile Include="Plumbing\WindsorControllerFactory.cs" />
+    <Compile Include="Plumbing\Installers\ControllersInstaller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plumbing\Installers\LoggerInstaller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plumbing\WindsorControllerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

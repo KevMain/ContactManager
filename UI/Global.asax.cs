@@ -3,7 +3,6 @@ using Castle.Windsor;
 using System.Web;
 using Castle.Windsor.Installer;
 using CompatibleSoftware.ContactManager.UI.Plumbing;
-using CompatibleSoftware.ContactManager.UI.Plumbing.Installers;
 
 namespace CompatibleSoftware.ContactManager.UI
 {

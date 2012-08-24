@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace CompatibleSoftware.Infrastructure.Startup
 {
@@ -8,7 +7,6 @@ namespace CompatibleSoftware.Infrastructure.Startup
     /// </summary>
     public static class Bootstrapper
     {
-        
         /// <summary>
         /// Empty static constructor so the class can't be initialised
         /// </summary>
