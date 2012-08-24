@@ -2,26 +2,24 @@
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Threading;
-using CompatibleSoftware.Infrastructure.Logging;
 using CompatibleSoftware.Infrastructure.Security;
 using CompatibleSoftware.Infrastructure.UI.Notify;
+using Castle.Core.Logging;
 
 namespace CompatibleSoftware.Infrastructure.Exceptions
 {
     public class DefaultExceptionPolicy : IExceptionPolicy
     {
-        public ILogger Log { get; set; }
+        public ILogger Logger { get; set; }
         private readonly INotifier _notifier;
 
         public DefaultExceptionPolicy()
         {
-            Log = Logger.Instance;
         }
 
         public DefaultExceptionPolicy(INotifier notifier)
         {
             _notifier = notifier;
-            Log = Logger.Instance;
         }
 
         public bool HandleException(object sender, Exception exception)
@@ -31,7 +29,7 @@ namespace CompatibleSoftware.Infrastructure.Exceptions
                 return false;
             }
 
-            Log.Error(exception, "An unexpected exception was caught");
+            Logger.Debug("An unexpected exception was caught", exception);
 
             do
             {
