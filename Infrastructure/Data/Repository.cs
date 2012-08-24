@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using CompatibleSoftware.Infrastructure.Logging;
+using Castle.Core.Logging;
 
 namespace CompatibleSoftware.Infrastructure.Data
 {
     public class Repository<T> : IRepository<T>
     {
-        private ILogger Log { get; set; }
+        public ILogger Logger { get; set; }
 
         public Repository()
         {
-            Log = Logger.Instance;
         }
 
         #region IRepository<T> Members
@@ -56,7 +55,8 @@ namespace CompatibleSoftware.Infrastructure.Data
 
         public virtual T Get(int id)
         {
-            Log.Debug("Get {0}", id);
+            Logger.Debug(String.Format("Get {0}", id));
+
             throw new NotImplementedException();
         }
 
@@ -67,17 +67,17 @@ namespace CompatibleSoftware.Infrastructure.Data
 
         public virtual void Create(T entity)
         {
-            Log.Debug("Create {0}", entity);
+            Logger.Debug(String.Format("Create {0}", entity));
         }
 
         public virtual void Update(T entity)
         {
-            Log.Debug("Update {0}", entity);
+            Logger.Debug(String.Format("Update {0}", entity));
         }
 
         public virtual void Delete(T entity)
         {
-            Log.Debug("Delete {0}", entity);
+            Logger.Debug(String.Format("Delete {0}", entity));
         }
 
         public virtual int Count(Expression<Func<T, bool>> predicate)
